@@ -11,23 +11,30 @@ This project aims to assess the quality of water samples by calculating a Water 
 **Dataset**
 
 The dataset includes various water quality parameters such as:
-Temperature
-DO (Dissolved Oxygen)
-pH
-Conductivity
-BOD (Biochemical Oxygen Demand)
-Nitrate
-Fecal Coliform
-Total Coliform
+
+Temperature,
+DO (Dissolved Oxygen),
+pH,
+Conductivity,
+BOD (Biochemical Oxygen Demand),
+Nitrate,
+Fecal Coliform and 
+Total Coliform.
 
 The dataset used is adapted from publicly available water quality monitoring data published by the Central Pollution Control Board (CPCB), Government of India.
 
 **WQI Calculation**
 
+According to BIS 10500, WHO standards and CPCB guidelines the standard values of DO, pH and BOD are 7mg/L, 7 and 1mg/L repectively.
+
 WQI is computed as a weighted average of three sub-indices:
+
 DO_si = DO scaled to 100
+
 PH_si = pH scaled to 100
+
 BOD_si = 100 - (BOD × 5)
+
 Final WQI = 0.3 × DO_si + 0.2 × PH_si + 0.5 × BOD_si
 
 WQI Classification Criteria(in the format WQI score: Class):
